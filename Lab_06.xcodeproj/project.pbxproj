@@ -14,6 +14,10 @@
 		6DDEE7252CD93C2F00659213 /* Lab_06Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE7242CD93C2F00659213 /* Lab_06Tests.swift */; };
 		6DDEE72F2CD93C2F00659213 /* Lab_06UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE72E2CD93C2F00659213 /* Lab_06UITests.swift */; };
 		6DDEE7312CD93C2F00659213 /* Lab_06UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE7302CD93C2F00659213 /* Lab_06UITestsLaunchTests.swift */; };
+		6DDEE73F2CD9425300659213 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE73E2CD9425300659213 /* ScannerView.swift */; };
+		6DDEE7412CD95C6100659213 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE7402CD95C6100659213 /* CameraView.swift */; };
+		6DDEE7442CD999D700659213 /* Permision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE7432CD999D700659213 /* Permision.swift */; };
+		6DDEE7462CD9D14E00659213 /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEE7452CD9D14E00659213 /* QRScannerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		6DDEE72A2CD93C2F00659213 /* Lab_06UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab_06UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDEE72E2CD93C2F00659213 /* Lab_06UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab_06UITests.swift; sourceTree = "<group>"; };
 		6DDEE7302CD93C2F00659213 /* Lab_06UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab_06UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6DDEE73E2CD9425300659213 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		6DDEE7402CD95C6100659213 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		6DDEE7432CD999D700659213 /* Permision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permision.swift; sourceTree = "<group>"; };
+		6DDEE7452CD9D14E00659213 /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,8 @@
 		6DDEE7112CD93C2100659213 /* Lab_06 */ = {
 			isa = PBXGroup;
 			children = (
+				6DDEE7422CD9998900659213 /* Model */,
+				6DDEE73D2CD9422300659213 /* View */,
 				6DDEE7122CD93C2100659213 /* Lab_06App.swift */,
 				6DDEE7142CD93C2100659213 /* ContentView.swift */,
 				6DDEE7162CD93C2E00659213 /* Assets.xcassets */,
@@ -127,6 +137,24 @@
 				6DDEE7302CD93C2F00659213 /* Lab_06UITestsLaunchTests.swift */,
 			);
 			path = Lab_06UITests;
+			sourceTree = "<group>";
+		};
+		6DDEE73D2CD9422300659213 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DDEE73E2CD9425300659213 /* ScannerView.swift */,
+				6DDEE7402CD95C6100659213 /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DDEE7422CD9998900659213 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DDEE7432CD999D700659213 /* Permision.swift */,
+				6DDEE7452CD9D14E00659213 /* QRScannerDelegate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DDEE73F2CD9425300659213 /* ScannerView.swift in Sources */,
 				6DDEE7152CD93C2200659213 /* ContentView.swift in Sources */,
+				6DDEE7442CD999D700659213 /* Permision.swift in Sources */,
 				6DDEE7132CD93C2100659213 /* Lab_06App.swift in Sources */,
+				6DDEE7462CD9D14E00659213 /* QRScannerDelegate.swift in Sources */,
+				6DDEE7412CD95C6100659213 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Lab_06/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -427,7 +460,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -435,7 +468,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lab-06";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,6 +488,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Lab_06/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -463,7 +499,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -471,7 +507,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lab-06";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
